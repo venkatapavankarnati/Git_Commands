@@ -1,0 +1,35 @@
+three states of a file
+	committed modified staged
+
+three stages of a git project
+	working directory, staging area and .git directory
+
+.git contains the meta data for the repository.
+
+staging area has the files that are modified and that are to be committed. no need to commit all the updated files every time. you can select the few of the updated files and add them to staging area and then commit.
+git add .         // adds all the project files to the staging area
+git commit -m "message"               //commit the files in the staging area. only files that are added to the staging area can be committed.
+git remote add origin https:.... .git     //to create a link to push and pull changes to local and from hosting services.
+git push -u origin master  //
+
+git status     // to check if there are any files to commit. can check what files are untracked(new files) and what are in staged area and what are in unstaged state(just modified the previous committed files).
+can also use git status --short to get the shorter description.
+
+GitHub, GitLab and bitbucket are web based git repository hosting services.
+
+git diff --Staged   //to check what has been modified in the files that are staged. 
+git diff //to check what has been modified in the files that are not staged.
+
+git commit -a -m "message" //adds all changes to staging that are being tracked by the git and then commit without using git add command. the files that are tracked by git are the files that are committed previously. i guess it doesn't add the new files to the staging area just the tracked ones will be added.
+
+git log //to check all the previous commits with who did the commit and when.
+
+git rm filename  //remove file from project folder and will be in the to be committed area to stop tracking the file. 
+git rm --cached filename  //without removing from project folder this file will be untracked.
+git mv previousname newname  //rename the file
+
+git checkout -b newBranch   //checkout is to move between the branches and -b is to create a new branch. dont use -b to just move to another branch.
+
+git clone urlfromgithub // pull to local 
+
+git diff branchone branchtwo // to show the difference between two branches
